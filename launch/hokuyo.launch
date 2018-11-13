@@ -1,0 +1,14 @@
+<launch>
+  <node pkg="urg_node" type="urg_node" name="Hokuyo_Lidar" output="screen">
+    <param name="ip_address" value=""/>
+    <param name="serial_port" value="/dev/UBG-04LX"/>
+    <param name="serial_baud" value="115200"/>
+    <param name="frame_id" value="base_scan"/>
+    <param name="calibrate_time" value="true"/>
+    <param name="publish_intensity" value="false"/>
+    <param name="publish_multiecho" value="false"/>
+    <param name="angle_min" value="-1.5707963"/> <!--default -1.5707963-->
+    <param name="angle_max" value="1.5707963"/> <!--default 1.5707963-->
+	
+  </node>
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+  
+  <node pkg="rosserial_python" type="serial_node.py" name="OpenCR" output="screen">
+    <param name="port" value="/dev/OpenCR_1"/>
+    <param name="baud" value="115200"/>
+  </node>
+</launch>

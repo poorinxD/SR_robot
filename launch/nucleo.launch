@@ -1,0 +1,8 @@
+<launch>
+  
+
+  <node pkg="rosserial_python" type="serial_node.py" name="nucleo" output="screen">
+    <param name="port" value="/dev/F411_1"/>
+    <param name="baud" value="250000"/>
+  </node>
+</launch>

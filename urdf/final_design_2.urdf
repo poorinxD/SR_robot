@@ -1,0 +1,112 @@
+<robot
+  name="final_design_2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.079672 -8.8492E-05 0.10557"
+        rpy="0 0 0" />
+      <mass
+        value="20.951" />
+      <inertia
+        ixx="1.3569"
+        ixy="-0.00017808"
+        ixz="0.01385"
+        iyy="1.2052"
+        iyz="0.0001414"
+        izz="0.51557" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_scan">
+    <inertial>
+      <origin
+        xyz="-0.0180076264572657 -9.1975537817035E-06 -0.00889838617849367"
+        rpy="0 0 0" />
+      <mass
+        value="0.204546095056679" />
+      <inertia
+        ixx="1.80411576967838E-09"
+        ixy="-2.92716590806063E-10"
+        ixz="4.18096533393512E-10"
+        iyy="1.68746981316781E-09"
+        iyz="2.16004476190685E-10"
+        izz="1.40520118951431E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_laser.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_laser.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="imu_link">
+  </link>
+  <joint
+    name="hokuyo"
+    type="fixed">
+    <origin
+      xyz="0.1435 0 0.036"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_scan" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.036"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

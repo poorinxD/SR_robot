@@ -15,6 +15,8 @@ for final_design_2 robot</p>
   <run_depend>rviz</run_depend>
   <run_depend>joint_state_publisher</run_depend>
   <run_depend>gazebo</run_depend>
+  <run_depend>urg_node</run_depend>
+  <run_depend>rosserial_python</run_depend>
   <export>
     <architecture_independent />
   </export>

@@ -7,7 +7,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find final_design_2)/urdf/final_design_2.urdf" />
+    textfile="$(find final_design_2)/urdf/RS3.urdf" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,9 +22,6 @@
 
  <!-- Nucleo MCU -->
   <include file="$(find final_design_2)/launch/nucleo.launch"/>
-
- <!-- OpenCR -->
-  <include file="$(find final_design_2)/launch/opencr.launch"/>
 
  <!-- Lidar -->
   <include file="$(find final_design_2)/launch/hokuyo.launch"/>

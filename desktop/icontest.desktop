@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=SR robot Mapping
+Comment=ROS - Mapping with rviz
+Exec=bash -c "source /opt/ros/kinetic/setup.bash && source /home/phurin/catkin_ws/devel/setup.bash && roslaunch final_design_2 slam_test.launch"
+Icon=/home/phurin/catkin_ws/src/SR_robot/desktop/ros.png
+Type=Application
+Categories=ROS;Development;Engineering;
+StartupNotify=true

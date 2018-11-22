@@ -1,0 +1,96 @@
+<robot
+  name="RS3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.079655 -8.9506E-05 0.19583"
+        rpy="0 0 0" />
+      <mass
+        value="20.959" />
+      <inertia
+        ixx="1.508"
+        ixy="-0.00017676"
+        ixz="0.024996"
+        iyy="1.3558"
+        iyz="0.00033804"
+        izz="0.51605" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_scan">
+    <inertial>
+      <origin
+        xyz="-0.018008 -9.1976E-06 -0.0097984"
+        rpy="0 0 0" />
+      <mass
+        value="0.20455" />
+      <inertia
+        ixx="1.8041E-09"
+        ixy="-2.9272E-10"
+        ixz="4.181E-10"
+        iyy="1.6875E-09"
+        iyz="2.16E-10"
+        izz="1.4052E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_scan.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_design_2/meshes/base_scan.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="scan_joint"
+    type="fixed">
+    <origin
+      xyz="0.1435 -0.001 -0.0109"
+      rpy="3.1416 1.5951E-15 -4.6837E-16" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_scan" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

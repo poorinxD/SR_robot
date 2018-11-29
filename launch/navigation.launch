@@ -1,0 +1,23 @@
+<launch>
+  <!-- Arguments -->
+
+  <arg name="map_file" default="/home/ktb/maps/map23-11-1.yaml"/>
+
+  <node type="rviz" name="rviz" pkg="rviz" required="true"
+	args="-d $(find srobot)/rviz/navigation_rviz.rviz" />
+
+  <!-- Robot -->
+  <include file="$(find srobot)/launch/robot.launch"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find srobot)/launch/amcl.launch"/>
+
+  <!-- Move base -->
+  <include file="$(find srobot)/launch/move_base.launch">
+    
+  </include>
+
+</launch>

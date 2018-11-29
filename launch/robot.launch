@@ -7,7 +7,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find final_design_2)/urdf/RS3.urdf" />
+    textfile="$(find srobot)/urdf/srobot.urdf" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -21,9 +21,15 @@
     type="state_publisher" />  
 
  <!-- Nucleo MCU -->
-  <include file="$(find final_design_2)/launch/nucleo.launch"/>
+  <include file="$(find srobot)/launch/nucleo.launch"/>
+
+ <!-- OpenCR -->
+  <include file="$(find srobot)/launch/opencr.launch"/>
+
+<!-- imu transform -->
+  <include file="$(find srobot)/launch/imu_transform.launch"/>
 
  <!-- Lidar -->
-  <include file="$(find final_design_2)/launch/hokuyo.launch"/>
+  <include file="$(find srobot)/launch/hokuyo.launch"/>
 
 </launch>

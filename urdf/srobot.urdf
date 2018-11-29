@@ -1,0 +1,164 @@
+<robot
+  name="srobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0862521575920466 1.57664490788578E-05 0.194624283901667"
+        rpy="0 0 0" />
+      <mass
+        value="33.2741044624964" />
+      <inertia
+        ixx="1.54168237437275"
+        ixy="8.41630492671114E-05"
+        ixz="-0.0195161991959801"
+        iyy="1.46715734443499"
+        iyz="-3.81611683615727E-05"
+        izz="0.61703616983001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://srobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://srobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_scan">
+    <inertial>
+      <origin
+        xyz="-0.0180076264461681 -9.1975517765297E-06 -0.00979838616911467"
+        rpy="0 0 0" />
+      <mass
+        value="0.204546095137456" />
+      <inertia
+        ixx="1.80411577040283E-09"
+        ixy="-2.92716590680799E-10"
+        ixz="4.18096533096995E-10"
+        iyy="1.68746981356662E-09"
+        iyz="2.16004476187873E-10"
+        izz="1.40520118912108E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://srobot/meshes/base_scan.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://srobot/meshes/base_scan.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="scan_joint"
+    type="fixed">
+    <origin
+      xyz="0.1435 -0.001 -0.0109"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_scan" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="0.00562012085862895 0.00216740166295631 -0.000292591049908114"
+        rpy="0 0 0" />
+      <mass
+        value="0.0150303013778878" />
+      <inertia
+        ixx="6.83280179880971E-07"
+        ixy="-1.2832938740688E-06"
+        ixz="-2.88988605151204E-07"
+        iyy="2.5797993811447E-06"
+        iyz="-1.45158034917182E-07"
+        izz="3.19739448351713E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://srobot/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://srobot/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.1265 0 0.0807"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_frame" />
+  <joint
+    name="imuframe_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.068"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

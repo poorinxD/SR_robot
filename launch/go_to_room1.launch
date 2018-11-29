@@ -1,0 +1,4 @@
+<launch>
+  <node name="goal_sender" pkg="srobot_appilcation" type="goal_sender" output="screen" >
+  </node>
+</launch>

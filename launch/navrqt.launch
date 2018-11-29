@@ -1,0 +1,4 @@
+<launch>
+  <node name = "rqt_navigation" pkg = "rqt_gui" type = "rqt_gui" respawn = "false" output = "screen" 
+  args = "--perspective-file $(find srobot)/rqt/rviz_nav.perspective"/>
+</launch>

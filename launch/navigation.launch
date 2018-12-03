@@ -3,7 +3,7 @@
 
   <arg name="map_file" default="/home/ktb/maps/map23-11-1.yaml"/>
 
-  <node type="rviz" name="rviz" pkg="rviz" required="true"
+  <node type="rviz" name="rviz" pkg="rviz" 
 	args="-d $(find srobot)/rviz/navigation_rviz.rviz" />
 
   <!-- Robot -->

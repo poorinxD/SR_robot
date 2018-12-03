@@ -23,9 +23,6 @@
  <!-- Nucleo MCU -->
   <include file="$(find srobot)/launch/nucleo.launch"/>
 
-<!-- imu transform -->
-  <include file="$(find srobot)/launch/imu_transform.launch"/>
-
  <!-- Lidar -->
   <include file="$(find srobot)/launch/hokuyo.launch"/>
 

@@ -23,9 +23,6 @@
  <!-- Nucleo MCU -->
   <include file="$(find srobot)/launch/nucleo.launch"/>
 
- <!-- OpenCR -->
-  <include file="$(find srobot)/launch/opencr.launch"/>
-
 <!-- imu transform -->
   <include file="$(find srobot)/launch/imu_transform.launch"/>
 

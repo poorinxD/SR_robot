@@ -1,7 +1,7 @@
 <launch>
   <!-- Arguments -->
 
-  <arg name="map_file" default="/home/ktb/maps/map23-11-1.yaml"/>
+  <arg name="map_file" default="/home/ktb/maps/map21-12-4.yaml"/>
 
   <node type="rviz" name="rviz" pkg="rviz" 
 	args="-d $(find srobot)/rviz/navigation_rviz.rviz" />

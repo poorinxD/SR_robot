@@ -22,6 +22,9 @@
 
  <!-- Nucleo MCU -->
   <include file="$(find srobot)/launch/nucleo.launch"/>
+ 
+ <!-- OpenCR -->
+  <include file="$(find srobot)/launch/opencr.launch"/>
 
  <!-- Lidar -->
   <include file="$(find srobot)/launch/hokuyo.launch"/>

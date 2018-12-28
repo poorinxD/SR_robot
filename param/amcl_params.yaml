@@ -3,7 +3,7 @@ use_map_topic: true
 min_particles: 500
 max_particles: 3000
 kld_err: 0.02
-update_min_d: 0.2
+update_min_d: 0.1
 update_min_a: 0.1
 resample_interval: 1
 transform_tolerance: 0.5

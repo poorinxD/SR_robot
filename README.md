@@ -3,65 +3,47 @@
 Main package of KTB Prototype Service robot. Include Robot's URDF, launch files, ROS Mapping & Navigation parameter, and firmware for STM32 NucleoF411RE.
 <img src="https://user-images.githubusercontent.com/21339780/52552936-8f4e2e80-2e14-11e9-8bec-175584288dcc.JPG" alt="main"/>
 
-## Getting Started
-
-
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+## System Requirement
+- Ubuntu 16.04LTS
+- ROS Kinetic Kame
+### Update by using git pull
+On local machine
 ```
-Give examples
+cd ~/catkin_ws/src/srobot/
 ```
-
-### Installing by catkin_make
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+git pull
 ```
+### Installing package by catkin_make
+In case of reinstall. Please install on Intel NUC7 miniPC on the robot.
 
-And repeat
+Install this as a ROS package by using catkin_make.
 
+1. Clone this Rep into catkin_ws.
 ```
-until finished
+cd ~/catkin_ws/src/
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+```
+git clone -b master https://github.com/poorinxD/SR_robot.git
+```
+2. Install dependancy using rosdep.
+```
+cd .. && rosdep install srobot
+```
+3. Make by catkin_make on catkin_ws directory
+```
+catkin_make
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-
-
 
 
 ## Authors

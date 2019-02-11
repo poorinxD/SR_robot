@@ -30,7 +30,7 @@ git clone -b master https://github.com/poorinxD/SR_robot.git
 ```
 cd .. && rosdep install srobot
 ```
-3. Make by catkin_make on catkin_ws directory
+3. Make by catkin_make on catkin_ws directory.
 ```
 catkin_make
 ```

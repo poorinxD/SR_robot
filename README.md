@@ -73,6 +73,7 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 ![screenshot from 2018-12-17 15-44-08](https://user-images.githubusercontent.com/21339780/52558067-ddb6f980-2e23-11e9-80f2-4472346a8a42.png)
 4. Manually control the robot by staying on teleop_key tab and press wasdx. Controll at low speed 0-3 m/s.
+
 5. Save the map by running map_saver node.
 ```
 rosrun map_server map_saver -f ~/map

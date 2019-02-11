@@ -2,6 +2,8 @@
 
 Main package of KTB Prototype Service robot. Include Robot's URDF, launch files, ROS Mapping & Navigation parameter, and firmware for STM32 NucleoF411RE.
 ![main](https://user-images.githubusercontent.com/21339780/52551724-4e541b00-2e10-11e9-82f1-03c854ec5fb9.JPG =100x200)
+<img src="https://user-images.githubusercontent.com/21339780/52551724-4e541b00-2e10-11e9-82f1-03c854ec5fb9.JPG" alt="drawing" style="width:200px;"/>
+
 ## Getting Started
 
 

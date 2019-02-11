@@ -86,7 +86,7 @@ rosrun map_server map_saver -f ~/map
 
 ## Authors
 
-* **Phurin Rangpong** - email: poorin31632@gmail.com
+* **Phurin Rangpong** - email: poorin31632@gmail.com, [Facebook](https://www.facebook.com/poorin.rangpong)
 
 
 
